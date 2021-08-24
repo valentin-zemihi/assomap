@@ -1,101 +1,416 @@
-/*Color MAP
-	Bleu = #1F3F7C
-	Jaune = #F8D95C
-*/
-/*---Header---*/
-#zoneBanner {
-	margin-top : 20px ;
-	margin-bottom : 20px ;
+/*---Variable CSS---*/
+:root {
+	/*Color MAP*/
+	--primaryMAP : #1F3F7C ;
+	--primaryMAPHover : #1F3F7C22 ;
+	--secondaryMAP : #F8D95C ;
+	--secondaryMAPHover : #F8D95Caa ;
+	--secondaryMAPHoverLight : #F8D95C22 ;
 }
-
-/*---Title---*/
-#zoneTitle {
-	text-align : center ;
-	margin-top : 10px ;
-	margin-bottom: 10px ;
-}
-
-.title {
-	font-size : 50px ;
-	font-weight : bold ;
-}
-
-/*---transition---*/
-.transition {
-	height : 5px ; 
-	background-color : #F8D95C ;
-}
-
-/*---Menu---*/
-#menu {
-	position: -webkit-sticky;
-	position: sticky;
-
-	top : 0px ;
-
-	font-size: 1.5em ;
-}
-
-.bg-primary {
-	background-color : #1F3F7C !important ;
-}
-
-#brandMenu {
-	font-weight : bold ;
-}
-
-.nav-link {
-	color: white !important ;
-}
-
-.nav-link:hover {
-	color: #F8D95C !important;
-}
-
-.active {
-	font-weight : bold ;
-	color: #F8D95C !important;
-}
-
-/*---Main---*/
-.zonePart {
-	margin-top : 20px;
-}
-
-h1 {
-	font : bold 2em "Verdana";
-	color : white ;
-
-	background-color : #1F3F7C ;
-	border : 5px solid #F8D95C ;
-	border-radius : 30px ;
-	padding-left : 30px !important;
-	padding-bottom : 10px ;
-	padding-top : 10px ;
-}
-
-p {
-	text-align : justify ;
-}
-
-.linkPart {
-	text-align : center;
-	margin-bottom : 10px ;
-}
-
-/*---Footer---*/
-footer {
-	background-color : #1F3F7C ;
-
-	padding-top : 10px ;
-	padding-bottom : 20px ;
-
-	color : white ;
-	font-weight : bold ;
-}
-
-/*--Tools--*/
-.allCenter {
-	margin : auto ;
+	
+/*WIP*/
+.toChange {
+	background-color : #b2ef00 ;
 	text-align: center;
 }
+
+.tCThumbnail {
+	height : 140px ;
+	background-color : #b2ef00 ;
+}
+
+/*---Balise HTML---*/
+	body {
+		color: black;
+		font-size: 16px;
+	}
+
+	main {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+	
+	h1 {
+		font : bold 2em "Verdana";
+		color : white ;
+	
+		background-color : var(--primaryMAP) ;
+		border : 5px solid var(--secondaryMAP) ;
+		border-radius : 30px ;
+		padding-left : 30px !important;
+		padding-bottom : 10px ;
+		padding-top : 10px ;
+	}
+
+	h2 {
+		font : bold 1.5em "Verdana" ;
+		color: var(--secondaryMAP);
+		padding-left : 1.25rem !important;
+	}
+	
+	p {
+		margin-top: 1rem;
+		margin-bottom: 0;
+		text-align : justify ;
+	}
+	
+	footer {
+		background-color : var(--primaryMAP) ;
+	
+		padding-top : 10px ;
+		padding-bottom : 1.25rem ;
+	
+		color : white ;
+		font-weight : bold ;
+	}
+
+/*---General---*/
+	.fakeActive {
+		font-weight: bold;
+		color: var(--secondaryMAP) /*!important*/;
+	}
+	.fakeActive:hover{
+		color: white /*!important*/
+	}
+
+	.zonePart {margin-top : 1.25rem;}
+
+	.separator {
+		margin-top : 1.25rem;
+		width : 100% ;
+		height : 0.5rem ;
+		background-color : var(--primaryMAP);
+	}
+
+	.divTitle {
+		text-align : center ;
+		font-weight: bold ;
+		font-size: 2.5rem ;
+		color : var(--secondaryMAP);
+	}
+
+/*---Header---*/
+	#zoneBanner {
+		margin-top : 1.25rem ;
+		margin-bottom : 1.25rem ;
+	}
+
+/*---Title---*/
+	#zoneTitle {
+		text-align : center ;
+		margin-top : 10px ;
+		margin-bottom: 10px ;
+	}
+
+	.title {
+		font-size : 50px ;
+		font-weight : bold ;
+	}
+
+/*---transition---*/
+	.transition {
+		height : 5px ; 
+		background-color : var(--secondaryMAP) ;
+	}
+
+/*---Menu---*/
+	.navbar {
+		background-color: var(--primaryMAP);
+	}
+
+	#menu {
+		position: -webkit-sticky;
+		position: sticky;
+	
+		top : 0px ;
+	
+		font-size: 1.5rem ;
+	}
+	
+	.collapsing .collapseSeparator {
+		width: 100%;
+		height: 5px;
+		background-color: white;
+
+		margin-top: 1rem;
+	}
+	.show .collapseSeparator {
+		width: 100%;
+		height: 5px;
+		background-color: white;
+
+		margin-top: 1rem;
+	}
+
+	#brandMenu {font-weight : bold ;}
+	#brandMenu:hover{color: white;}
+
+	/*Effectif uniquement sur PC*/
+	@media all and (min-width: 1200px) {
+		.navbar .nav-item .dropdown-menu{ display: none; }
+		.navbar .nav-item:hover .dropdown-menu{ display: block; }
+		.navbar .nav-item .dropdown-menu{ margin-top:0; }
+	}
+	
+/***Home page***/
+	.linkPart {
+		text-align : center;
+		margin-bottom : 10px ;
+	}
+
+	.btnPartHome {
+		max-height: 25rem;
+	}
+	.btnPartHome:hover {
+		background-color: #00000022;
+		cursor: pointer;
+	}
+	.btnPartHome img {
+		max-height: 25rem;
+	}
+	.btnPartHome.active {
+		background-color: var(--primaryMAPHover);
+	}
+
+	.vertBtnPartHomeSep {
+		width: 0.5rem;
+		max-height: 25rem;
+		background-color: var(--secondaryMAP);
+	}
+
+	.accordionPres {
+		background-color: var(--secondaryMAPHoverLight);
+		border: unset;
+
+	}
+
+	.titleAccordionPres {
+		background-color: transparent;
+
+		border: unset;
+
+		color: var(--primaryMAP);
+	}
+
+/***News***/
+	.divNews {
+		margin-top : 10px ;
+		border : solid;
+		border-color : white ;
+		border-radius: 0px 1.25rem 1.25rem 0px;
+	}
+	.divNews:hover {
+		background-color: var(--secondaryMAPHover) ;
+		cursor: pointer;
+	}
+
+	.divNewsTxt {
+		padding-left : 10px ;
+	}
+
+	.bigNewsTitle {
+		font-weight : bold ;
+		font-size : 2rem ;
+	}
+
+	.newsTitle {
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+
+	.newsAuthorDate {
+		font-style : italic;
+		color: black ;
+	}
+
+	.newsLeadPara {
+		font-weight: bold;
+	}
+
+	.centrerCartridge {
+		display: flex;
+		justify-content: center;
+	}
+
+	.cartridge {
+		border: solid 0.5rem var(--secondaryMAP);
+		border-radius: 1rem;
+
+		margin: 1rem;
+		padding : 1rem;
+
+		font-size: 2rem;
+		text-decoration: none;
+		color: var(--primaryMAP);
+	}
+	.cartridge:hover {
+		background-color: var(--primaryMAP);
+		font-weight: bold;
+		color: white;
+	}
+
+/***Gazette***/
+	#menuGazette {
+		z-index: 99;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0px;
+		font-size: 1rem;
+	}
+
+	#navbarGazette {
+		display: flex;
+		padding-top: unset;
+		padding-bottom: unset;
+
+		justify-content: center;
+	}
+
+	#zonePrevNext {
+		margin-bottom: 1rem;
+	}
+
+	#linkPrev::before {
+		display: inline-block;
+		margin-right: .255em;
+		vertical-align: center;
+		content: "";
+		border-top: .3em solid transparent;
+		border-right: .3em solid;
+		border-bottom: .3em solid transparent;
+		border-left: 0;
+	}
+
+	#linkNext::after {
+		display: inline-block;
+		margin-left: .255em;
+		vertical-align: center;
+		content: "";
+		border-top: .3em solid transparent;
+		border-right: 0;
+		border-bottom: .3em solid transparent;
+		border-left: .3em solid;
+	}
+
+	.linkPrevNext {
+		font-size: 1rem;
+		font-weight: bold;
+		color : var(--secondaryMAP) ;
+		text-decoration: none;
+	}
+	.linkPrevNext:hover{
+		color: var(--secondaryMAPHover);
+		text-decoration: underline;
+	}
+
+	.linkPDF {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color : black ;
+		text-decoration: none;
+	}
+	.linkPDF:hover{
+		color: #000000aa;
+		text-decoration: underline;
+	}
+
+	#princTitleGazette {
+		font-weight: bold;
+		font-size: 5rem;
+		color: var(--primaryMAP);
+	}
+
+	#subitleGazette {
+		font-weight: bold;
+		font-size: 2.5rem;
+		color: var(--primaryMAP);
+	}
+
+	#zoneGazetteTitleSeparator {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	#gazetteTitleSeparator {
+		height: 0.5rem;
+		background-color: var(--secondaryMAP);
+	}
+
+	#editionNumber {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	#zoneEdito {
+		padding-bottom: 1rem;
+		border : 5px solid var(--secondaryMAP) ;
+	}
+
+	#zoneGazette .accordion-button:hover {
+		background-color: var(--secondaryMAPHoverLight);
+	}
+	#zoneGazette .accordion-button:not(.collapsed) {
+		background-color: var(--secondaryMAPHoverLight);
+	}
+
+	#zoneGazette h1 {
+		font: bold 2em "Verdana";
+		color: var(--primaryMAP);
+		background-color: unset ;
+		border: unset;
+		border-radius: 30px;
+
+		margin: 0px;
+
+		padding-left: 30px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+
+	.accordionGazette {
+		padding: 0.25rem;
+	}
+
+	.accordionItemTitle {
+		font-size: 1.5rem !important;
+		padding: 0px !important;
+		margin: 0px !important;
+	}
+
+	.accordionItemAuthor {
+		font-size: 1rem;
+	}
+
+	#zoneGazette ul {
+		margin: 0px;
+	}
+
+	.portraitGazette {
+		max-height: 200px;
+
+		margin: 1rem;
+
+		border : 3px solid #005221 ;
+		border-radius: 100%;
+	}
+
+	.imgTextTopLeft {
+		float: left;
+	}
+
+/*---Footer---*/
+
+
+/*--Tools--*/
+	.allCenter {
+		margin : auto ;
+		text-align: center;
+	}
+
+	/*Centrer verticalement et horizontal, besoin de display flex*/
+	.allCenterFlex {
+		justify-content : center;
+		align-items : center;
+	}
